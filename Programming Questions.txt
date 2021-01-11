@@ -1,0 +1,1643 @@
+Q1.WAJP to Take two input from user and perform all arithmatic task.
+>>import java.util.Scanner;
+public class Cal {
+public static void main(String[] args) {
+	Scanner sc =new Scanner(System.in);
+	System.out.println("Enter two number: ");
+	int a=sc.nextInt();
+	int b=sc.nextInt();
+
+	System.out.println("Addition of ("+a+" + "+b+") is: "+(a+b));
+	System.out.println("Subtraction of ("+a+" - "+b+") is: "+(a-b));
+	System.out.println("Multiplication of ("+a+" * "+b+") is: "+(a*b));
+	System.out.println("Division of ("+a+" / "+b+") is: "+(a/b));
+}
+
+}
+--------------------------------------------------------------------------------------------------
+Q2. WAJP to read the radius of a circle from the user based on that print area and Circumference.
+	Circumference= 2*pie*radius
+	Area= pie*radius*radius
+
+>>import java.util.Scanner;
+public class CircleClass 
+{
+	 static double p=3.14;
+public static void main(String[] args) 
+{
+	Scanner sc=new Scanner(System.in);
+	
+	System.out.println("Enter the radius of Circle: ");
+	double r=sc.nextDouble();
+	
+	System.out.println(r+" is Radius, Circle Area is: "+(p*r*r));
+	System.out.println(r+" is Radius, Circle Circumference is: "+(2*p*r));
+	
+}
+}
+---------------------------------------------------------------------------------------------------------
+Q3.WAJP to read an integr value from the user and print that numaber is a special two digit number or not.
+Hint:eg:39==((3+9)+(3*9))=39
+sum of digit + product of digit is equal to that number is called special number.
+eg: a=39
+a/10===3
+a%10===9
+
+>>import java.util.Scanner;
+public class SpecialTwoDigitNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter any one Integer Value");
+		int a=sc.nextInt();
+		int d1=a/10;
+		int d2=a%10;
+		
+		int n1=d1+d2;
+		int n2=d1*d2;
+		
+		if((n1+n2)==a)
+		{
+			System.out.println(a+" is a special number");
+		}
+		else
+		{
+			System.out.println(a+" is not a special number");
+		}
+	}
+}
+---------------------------------------------------------------------------------------------------------
+Q4.WAJP to read the side of a square and print area and perimeter.
+	Area=s*s;
+	Perimeter=4*s;
+>>import java.util.Scanner;
+public class SquareClass 
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Side Value of Square");
+		double s=sc.nextDouble();
+		System.out.println(s+" is Square side, Area of Square is: "+(s*s));
+		System.out.println(s+" is Square side, Perimeter of Square is: "+(4*s));
+	}
+}
+---------------------------------------------------------------------------------------------------------
+Q5.WAJP to read length and breadth of a rectangle and print area and perimeter.
+	Area=a*b
+	Perimeter=2(a+b)
+>>import java.util.Scanner;
+public class RectangleClass 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Length and Breadth of Rectangle");
+		System.out.print("Length: ");
+		double l=sc.nextDouble();
+		System.out.print("Breadth: ");
+		double b=sc.nextDouble();
+		
+		System.out.println("Area of Rectangle is: "+(l*b));
+		System.out.println("Perimeter of Rectangle is: "+(2*(l+b)));
+	}
+}
+---------------------------------------------------------------------------------------------------------
+Q6.WAJP to read 4 subject marks of a student and print total and average.
+>>import java.util.Scanner;
+public class StudentMarksTotalAverage 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter 4 marks of student.");
+		System.out.print("Subject-1: ");
+		double s1=sc.nextDouble();
+		System.out.print("Subject-2: ");
+		double s2=sc.nextDouble();
+		System.out.print("Subject-3: ");
+		double s3=sc.nextDouble();
+		System.out.print("Subject-4: ");
+		double s4=sc.nextDouble();
+		
+		System.out.println("Toatal Marks: "+(s1+s2+s3+s4));
+		System.out.println("Toatal Marks: "+((s1+s2+s3+s4)/4));
+	}
+}
+---------------------------------------------------------------------------------------------------------
+Q7.WAJP to read person name and his age and print what is his age will be after 5 years and what is his 
+was before 5 years.
+Hint: Output>.What is your name: Ramesh
+              How old are you:25
+              Ramesh your was 20 before 5 years and your age will be 30 after 5 years. 
+>>
+import java.util.Scanner;
+
+public class PersonAge 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("What is your Name: ");
+		String name=sc.next();
+		System.out.println("How Old are You: ");
+		int age=sc.nextInt();
+		System.out.println(name+" your age was "+(age-5)+" before 5 years and your age will be "+(age+5)+" after 5 years");
+	}
+}
+
+
+---------------------------------------------------------------------------------------------------------
+
+Q8.WAJP to read the principle ammount, rate of interest and time based on that calculate simple interset.
+>>import java.util.Scanner;
+public class SimpleInterest 
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter Prinipal Ammount: ");
+		double p=sc.nextDouble();
+		System.out.print("Enter Rate of Interest(in percentage): ");
+		double r=sc.nextDouble();
+		System.out.print("Enter Time Period(in years): ");
+		double t=sc.nextDouble();
+		
+		double si=(p*r*t)/100;
+		System.out.println("Simple Interest: "+si);
+		System.out.println("Total ammount is: "+(p+si));
+		
+		sc.close();
+	}
+}
+
+---------------------------------------------------------------------------------------------------------
+
+Q9.WAJP to read an integer value from the user and print the number is even or odd
+>>import java.util.Scanner;
+public class EvenOdd 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a number: ");
+		int a=sc.nextInt();
+		if(a%2==0)
+		{
+			System.out.println(a+" is an Even Number.");
+		}
+		else
+		{
+			System.out.println(a+" is an Odd Number.");
+		}
+		sc.close();
+	}
+}
+
+>>Or
+import java.util.Scanner;
+class EvenOdd2
+{
+public static void main(String argd[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter a Number");
+int a=sc.nextInt();
+int b=a/2;
+if(a==(b*2))
+System.out.println(a+" is an Even Number");
+else
+System.out.println(a+" is an Odd Number");
+}
+}
+---------------------------------------------------------------------------------------------------------
+Q10.With Using If statement check your number is odd or even.
+---------------------------------------------------------------------------------------------------------
+
+Q11. Without Using any control statement find number is even or odd.
+>>import java.util.Scanner;
+public class EvenOdd4 {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter a Number");
+	int a=sc.nextInt();
+	String s1[]= {"Even","Odd"};
+	System.out.println(a+" is an "+s1[a%2]+" number.");
+	System.out.println("Thank You");
+	sc.close();
+}
+}
+---------------------------------------------------------------------------------------------------------
+Q12. Without Using any Arithmatic Operator find number is even or odd.
+>>
+import java.util.Scanner;
+public class EvenOdd6 {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter a Number");
+	int a=sc.nextInt();
+	if((a&1)==0)
+		System.out.println(a+" is an Even Number.");
+	else
+		System.out.println(a+"is an Odd Number.");
+	sc.close();
+}
+}
+>>OR
+import java.util.Scanner;
+public class EvenOdd5 {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter a Number");
+	int a=sc.nextInt();
+	String s1[]= {"Even","Odd"};
+	System.out.println(a+" is an "+s1[a&1]+" number.");
+	System.out.println("Thank You");
+	sc.close();
+}
+}
+-------------------------------------------------------------------------------------------------------------------
+Q13.WAJP to read one integer value from the user and check that number is negative or Positive (zero is +ve)
+>>import java.util.Scanner;
+public class PositiveNegativeNumber {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter a number");
+	double n=sc.nextDouble();
+	if(n>=0)
+		System.out.println(n+" is positive number.");
+	else
+		System.out.println(n+" is negative number.");
+	sc.close();
+}
+}
+
+-------------------------------------------------------------------------------------------------------------
+Q14.WAJP to read from user and print number is zero or non zero.
+>>import java.util.Scanner;
+public class NumberIsZeroOrNot {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		double d=sc.nextDouble();
+		if(d!=0)
+			System.out.println(d+" is non zero number.");
+		else
+			System.out.println(d+" is zero.");
+		sc.close();
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------
+Q15.WAJP to read the age of a person and print is eligible to vote or not.
+>>import java.util.Scanner;
+public class VoteOrNOt 
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter your age: ");
+		double age=sc.nextDouble();
+		if(age>=18)
+			System.out.println("Yes! you can Vote.");
+		else
+			System.out.println("No! You can't Vote.");
+		sc.close();
+	}
+}
+
+------------------------------------------------------------------------------------------------------------
+Q16.WAJP to read the sallary of an employee deduct 5% ESI ammount from salary is salary is less 
+than 15000, otherwise deduct 10% TDS.and display his salary.
+>>import java.util.Scanner;
+public class Sallary {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter salary");
+		double sal=sc.nextDouble();
+		if(sal<15000)
+			System.out.println("Your salary after 5% ESI Deduction is: "+(sal-(sal*5)/100));
+		else
+			System.out.println("Your salary after 10% TDS Deduction is: "+(sal-(sal*10)/100));
+				
+		sc.close();
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------
+Q17.WAJP to read two integer values from the user and print biggest among those two numbers.
+>>import java.util.Scanner;
+public class BiggestNumber 
+{
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.print("Enter two number: ");
+		double n1=sc.nextDouble();
+		double n2=sc.nextDouble();
+		
+		if(n1>n2)
+			System.out.println(n1+" is Greater Number.");
+		else
+			System.out.println(n2+" is Greater Number.");
+		sc.close();
+	}
+}
+-------------------------------------------------------------------------------------------------------------------
+Q18.WAJP to read month number from the user and print corresponding month name.
+>>import java.util.Scanner;
+public class MonthNameByIfStatement {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter Month Number: ");
+		int a=sc.nextInt();
+		if(a==1)
+			System.out.println("January");
+		else if(a==2)
+			System.out.println("February");
+		else if(a==3)
+			System.out.println("March");
+		else if(a==4)
+			System.out.println("April");
+		else if(a==5)
+			System.out.println("May");
+		else if(a==6)
+			System.out.println("June");
+		else if(a==7)
+			System.out.println("July");
+		else if(a==8)
+			System.out.println("August");
+		else if(a==9)
+			System.out.println("September");
+		else if(a==10)
+			System.out.println("October");
+		else if(a==11)
+			System.out.println("Novemebr");
+		else if(a==12)
+			System.out.println("December");
+		else
+			System.out.println("Wrong Input");
+		sc.close();
+	}
+
+}
+----------------------------------------------------------------------------------------------------------------------
+Q19.WAJP to enter 4 subject of a student, if he/she scores less than 35 number in any number he/she failed or
+get more than or equal to 35 number he/she passed.
+>>import java.util.Scanner;
+public class PassFail {
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter 4 Subject Marks:");
+		System.out.print("Subject-1: ");
+		double m1=sc.nextDouble();
+		System.out.print("Subject-2: ");
+		double m2=sc.nextDouble();
+		System.out.print("Subject-3: ");
+		double m3=sc.nextDouble();
+		System.out.print("Subject-4: ");
+		double m4=sc.nextDouble();
+		
+		if(m1>=35 && m2>=35 && m3>=35 && m4>=35)
+			System.out.println("Passed");
+		else
+			System.out.println("Fail");
+		sc.close();
+	}
+}
+-------------------------------------------------------------------------------------------------------------------
+Q20.WAJP to read 3 fraction(floating point value) from the user and print biggest among those 3 numbers.
+>>import java.util.Scanner;
+public class BiggestAmongThreeNumber 
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter 3 numbers.");
+		System.out.print("number-1: ");
+		double n1=sc.nextDouble();
+		System.out.print("number-2: ");
+		double n2=sc.nextDouble();
+		System.out.print("number-3: ");
+		double n3=sc.nextDouble();
+		
+		if(n1>n2 && n1>n3)
+			System.out.println(n1+" is Biggest Number.");
+		else if(n2>n3)
+			System.out.println(n2+" is Biggest Number.");
+		else
+			System.out.println(n3+" is Biggest Number.");
+		sc.close();
+	}
+}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Q21.WAJP to read one integer value from the user and print sanju if the number is divisible by 3,print
+geeta if the number is divisible by 5, print sanju weds geeta if number is divisible by both 3 and 5
+other wise print breakup.
+>>import java.util.Scanner;
+public class SanjuGeeta 
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter any Integer Number: ");
+		int a =sc.nextInt();
+		if(a%3==0 && a%5 !=0)
+			System.out.println("Sanju");
+		else if(a%5==0 && a%3 !=0)
+			System.out.println("Geeta");
+		else if(a%3==0 && a%5==0)
+			System.out.println("Sanju Weds Geeta");
+		else
+			System.out.println("Breakup");
+		sc.close();
+	}
+}
+
+-------------------------------------------------------------------------------------------------------------------
+Q22.WAJP to read Year from the user and print that year is leap year or not
+>>import java.util.Scanner;
+public class LeapYear {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter a year: ");
+	int y=sc.nextInt();
+	if(y%4==0 && y%400==0)
+		System.out.println(y+ " is leap year.");
+	else
+		System.out.println(y+" not a leap year");
+	sc.close();
+	
+}
+}
+-------------------------------------------------------------------------------------------------------------------
+Q23.WAJP to check user enterd integer is digit or number.
+Hint. 3,5,-2,-9 is digit and 11, 78, 96 is number.
+>>import java.util.Scanner;
+public class DigitOrNumber 
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a Integr value ");
+		int a=sc.nextInt();
+		if(a<=9 || a>=-9)
+			System.out.println(a+" is a digit");
+		else
+			System.out.println(a+" is number");
+		sc.close();
+	}
+}
+
+-------------------------------------------------------------------------------------------------------------------
+Q24.WAJP to read month number from the user and print how many days in that month.
+>>import java.util.Scanner;
+public class DaysInMonth 
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter Month Number: ");
+		int m=sc.nextInt();
+		if(m==1||m==3||m==5||m==7||m==8||m==10||m==12)
+			System.out.println("31 Days");
+		else if(m==4||m==6||m==9||m==11)
+			System.out.println("30 Days");
+		else if(m==2)
+			System.out.println("28 or 29 Days");
+		else
+			System.out.println("Invalid Month Number");
+		sc.close();
+	}
+}
+
+-------------------------------------------------------------------------------------------------------------------
+Q25.WAJP to read one integer value from the user and print that integr is 2 digit number or not.
+>>import java.util.Scanner;
+public class TwoDigitNumber {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a number: ");
+		int a=sc.nextInt();
+		if((a>-100 && a<-9)||(a<100&&a>9))
+			System.out.println(a+" is two digit number");
+		else
+			System.out.println(a+" is not a two digit number");
+		sc.close();
+	}
+}
+-------------------------------------------------------------------------------------------------------------------
+Q26.WAJP to read day number from the user and print coressponding day name.
+>>import java.util.Scanner;
+
+public class DayNumber 
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter Day No.: ");
+		int d=sc.nextInt();
+		if(d==1)
+			System.out.println("Sunday");
+		else if(d==2)
+			System.out.println("Monday");
+		else if(d==3)
+			System.out.println("Tuesday");
+		else if(d==4)
+			System.out.println("Wednesday");
+		else if(d==5)
+			System.out.println("Thrusday");
+		else if(d==6)
+			System.out.println("Friday");
+		else if(d==7)
+			System.out.println("Saturday");
+		else
+			System.out.println("Wrong Day Number");
+		sc.close();
+	}
+}
+-------------------------------------------------------------------------------------------------------------------
+Q27.WAJP to read year from the user and print how many leap year happens before that year.
+>>import java.util.Scanner;
+public class CountLeapYear 
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a Year: ");
+		int y=sc.nextInt();
+		int count=0;
+		//y/400+y/4-y/100//different logic
+		for(int i=1;i<=y;i++)
+		{
+			if(i%400==0|| i%4==0 && i%100 !=0)
+			{
+				count++;
+			}
+		}
+		System.out.println(count+" leap year before "+y);
+		sc.close();
+	}
+}
+-------------------------------------------------------------------------------------------------------------------
+Q28.WAJP to read 3 distinct integer value from the user and print middle value among those 3 numbers.
+>>import java.util.Scanner;
+public class MiddleAmongThreeNumbers 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter 3 Numbers.");
+		System.out.print("First Number: ");
+		double n1=sc.nextDouble();
+		System.out.print("Second Number: ");
+		double n2=sc.nextDouble();
+		System.out.print("Third Number: ");
+		double n3=sc.nextDouble();
+		
+		if(n1>n2&&n2>n3)
+			System.out.println(n2+" is middle number");
+		else if (n2>n1&&n1>n3)
+			System.out.println(n1+" is middle number");
+		else
+			System.out.println(n3+" is middle number");
+		sc.close();
+	}
+}
+-------------------------------------------------------------------------------------------------------------------
+Q29.WAJP to read 4 integer values from the user and print smallest among those 4 numbers.
+>>import java.util.Scanner;
+
+public class SmallestAmongFourNumber 
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter 4 Numbers.");
+		System.out.print("First Number: ");
+		double n1=sc.nextDouble();
+		System.out.print("Second Number: ");
+		double n2=sc.nextDouble();
+		System.out.print("Third Number: ");
+		double n3=sc.nextDouble();
+		System.out.print("Fourth Number: ");
+		double n4=sc.nextDouble();
+		if(n1<n2&&n1<n3&&n1<n4)
+			System.out.println(n1+" is Smallest Number.");
+		else if(n2<n3&&n2<n4)
+			System.out.println(n2+" is Smallest Number");
+		else if(n3<n4)
+			System.out.println(n3+" is Smallest Number");
+		else
+			System.out.println(n4+" is Smallest Number");
+		sc.close();
+	}
+}
+-------------------------------------------------------------------------------------------------------------------
+Q30.WAJP to Print User Charcater is Vowel or Consonant.
+>>import java.util.Scanner;
+public class VowelConsonant 
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter any one Alphabet Character: ");
+		String st=sc.next();
+		char ch=st.charAt(0);
+		if(ch=='a'||ch=='A'||ch=='e'||ch=='E'||ch=='i'||ch=='I'||ch=='o'||ch=='O'||ch=='u'||ch=='U')
+		System.out.println(ch+" is a vowel");
+		else
+			System.out.println(ch+" is a consonant");
+		sc.close();
+	}
+}
+
+***********While Loop**************
+-------------------------------------------------------------------------------------------------------------------
+Q31.WAJP to print the first n natural numbers.
+>>import java.util.*;
+class FirstNNatural
+{
+	public static void main(String[] ar)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a Integer number: ");
+		int a=sc.nextInt();
+		int i=1;
+		while(i<=a)
+		{
+			System.out.println(i);
+			i++;
+		}
+		sc.close();
+	}
+}
+
+*******Do While
+-----------------------------------------------------------------------------------------------------------------
+Q32.WAJP to print the multiplication table for user entered number upto 10.
+>>import java.util.Scanner;
+class MultiplicationTable
+{
+	public static void main(String[] ar)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a Number: ");
+		int a=sc.nextInt();
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(a+"*"+i+"="+(a*i));
+		}
+		sc.close();
+	}
+}
+-----------------------------------------------------------------------------------------------------------------
+Q33.WAJP to calculate the sum of first n natural numbers
+**For Loop
+>>import java.util.*;
+class SumNatural
+{
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a Integer Number: ");
+int a=sc.nextInt();
+int sum=0;
+for(int i=1;i<=a;i++)
+{
+sum=sum+i;
+}
+System.out.println(sum+" is sum of"+a+" number");
+sc.close();
+}
+}
+
+**While Loop
+>>import java.util.*;
+class SumNatural
+{
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a Integer Number: ");
+int a=sc.nextInt();
+int sum=0,i=1;
+while(i<=a)
+{
+sum=sum+i;
+i++;
+}
+System.out.println(sum+" is sum of"+a+" number");
+sc.close();
+}
+}
+
+**OR
+>>import java.util.*;
+class SumNatural
+{
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a Integer Number: ");
+int a=sc.nextInt();
+int sum=0;
+while(a>0)
+{
+sum=sum+a;
+a--;
+}
+System.out.println("sum is: "+sum);
+sc.close();
+}
+}
+-----------------------------------------------------------------------------------------------------------------
+Q34.WAJP to print the even numbers within n
+***For Loop
+>>import java.util.*;
+class AllEven
+{
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a Number: ");
+int a=sc.nextInt();
+for(int i=0;i<=a;i=i+2)
+{
+System.out.print(i+" ");
+}
+sc.close();
+}
+}
+
+***While Loop
+>>import java.util.*;
+class AllEven
+{
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a Number: ");
+int a=sc.nextInt();
+int i=0;
+while(i<=a)
+{
+System.out.print(i+" ");
+i=i+2;
+}
+sc.close();
+}
+}
+-----------------------------------------------------------------------------------------------------------------
+Q35.WAJP to print the odd numbers from N to 1.
+**For Loop
+>>import java.util.*;
+class AllOdd
+{
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a Number: ");
+int a=sc.nextInt();
+for(int i=a;i>0;i=i-2)
+{
+System.out.print(i+" ");
+}
+sc.close();
+}
+}
+
+**While Loop
+
+-----------------------------------------------------------------------------------------------------------------
+Q36.WAJP to print multiple of 3 between 1 to N.
+>>import java.util.*;
+class MultipleOf3
+{
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a number: ");
+int a=sc.nextInt();
+for(int i=1;i<=a;i++)
+{
+if(i%3==0)
+System.out.print(i+" ");
+}
+sc.close();
+}
+}
+-----------------------------------------------------------------------------------------------------------------
+Q37.WAJP to print the facorial of N.
+>>import java.util.*;
+class Factorial
+{
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a number: ");
+int a=sc.nextInt();
+int f=1;
+for(int i=1;i<=a;i++)
+{
+f=f*i;
+}
+System.out.println("Factorial of "+a+" is: "+f);
+sc.close();
+}
+}
+-----------------------------------------------------------------------------------------------------------------
+Q38.WAJP to print Odd numbers between 1 to N.
+>>import java.util.*;
+class TotalOddNumber
+{
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a number: ");
+int a=sc.nextInt();
+int f=1;
+int count =0;
+for(int i=1;i<=a;i++)
+{
+if(i%2!=0)
+count++;
+}
+System.out.println(count+" total Odd number between 1 to "+a);
+sc.close();
+}
+}
+-----------------------------------------------------------------------------------------------------------------
+Q39.WAJP to print the even numbers from N to 1.
+>>import java.util.*;
+class TotalEvenNumber
+{
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a number: ");
+int a=sc.nextInt();
+int f=1;
+int count =0;
+for(int i=a;i>=1;i--)
+{
+if(i%2==0)
+System.out.print(i+" ");
+}
+sc.close();
+}
+}
+-----------------------------------------------------------------------------------------------------------------
+Q40.WAJP to calculate the sum of even numbers and odd numbers within 1toN.
+>>import java.util.*;
+class EvenOddSum
+{
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a number: ");
+int a=sc.nextInt();
+int even=0,odd=0;
+for(int i=a;i>=1;i--)
+{
+if(i%2==0)
+even=even+i;
+else
+odd=odd+i;
+}
+System.out.println(even+" is sum of all even number between 1 to "+a);
+System.out.println(odd+" is sum of all odd number between 1 to "+a);
+sc.close();
+}
+}
+
+-----------------------------------------------------------------------------------------------------------------
+Q41.WAJP to define a Method how many didgits present in the passed numbers.
+>>import java.util.Scanner;
+class CountDigitInNumber
+{
+public static void main(String[] ar)//Calling Method
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a Number: ");
+int n=sc.nextInt();
+int count=countDigit(n);//Calling Statement
+System.out.println(n+" has "+count+" Digits.");
+}
+static int countDigit(int n)
+{
+int count=0;
+do{
+count++;
+n=n/10;
+}while(n!=0);
+return count;
+}
+}
+-------------------------------------------------------------------------------------------------------------------
+Q42.WAJP to define a method to return sum of its digits
+Def. n=123 sum of digits of 123 is(1+2+3)=6
+>>import java.util.Scanner;
+class SumDigit
+{
+public static void main(String[] ar)//Calling Method
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a Number: ");
+int n=sc.nextInt();
+int sum=sumDigit(n);//Calling Statement
+System.out.println("Sum of Digit "+n+" is: "+sum);
+}
+static int sumDigit(int n)
+{
+int sum=0;
+do{
+int r=n%10; //456%10=6
+sum=sum+r;
+n=n/10;//456/10=45
+}while(n!=0);
+return sum;
+}
+}
+-------------------------------------------------------------------------------------------------------------------------
+Q43.WAJP to define a method to return product of its digits.
+>>import java.util.*;
+class ProductDigit
+{
+static int productDigit(int n)
+{
+int p=1;
+do
+{
+int r=n%10;
+p=p*r;
+n=n/10;
+}while(n!=0);
+return p;
+}
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a Number: ");
+int a=sc.nextInt();
+int p=productDigit(a);
+System.out.println(p+" is product of digits of "+a);
+sc.close();
+}
+}
+-----------------------------------------------------------------------------------------------------------------
+Q45.WAJP to define a method to return the factorial of n.
+>>import java.util.*;
+class FactorialMethod
+{
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a number: ");
+int a=sc.nextInt();
+int f=factorial(a);
+System.out.println("Factorial of "+a+" is: "+f);
+System.out.println("Factorial of 8 is: "+factorial(8));
+System.out.print("Enetr a number: ");
+int b=sc.nextInt();
+System.out.println("Factorial of "+b+" is: "+factorial(b));
+sc.close();
+}
+static int factorial(int num)
+{
+int f=1;
+while(num>1)
+{
+f=f*num;
+num--;
+}
+return f;
+}
+}
+-----------------------------------------------------------------------------------------------------------------
+Q46.WAJP to define a method to return biggest among 3 numbers.
+>>import java.util.*;
+class BiggestNumber
+{
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter 3 Number: ");
+System.out.print("First No.: ");
+int n1=sc.nextInt();
+System.out.print("Second No.: ");
+int n2=sc.nextInt();
+System.out.print("Third No.: ");
+int n3=sc.nextInt();
+int b=biggestNumber(n1,n2,n3);
+System.out.println("Biggest Number: "+b);
+sc.close();
+}
+static int biggestNumber(int a,int b,int c)
+{
+int big=0;
+if(a>b&&a>c)
+big=a;
+else if(b>c)
+big=b;
+else
+big=c;
+return big;
+}
+}
+-----------------------------------------------------------------------------------------------------------------
+Q47.WAJP to define a method to return true if the number is special 2 digit number otherwise return false.
+Hint:eg:39==((3+9)+(3*9))=39
+sum of digit + product of digit is equal to that number is called special number.
+eg: a=39
+a/10===3
+a%10===9
+>>import java.util.*;
+class SpecialNumberMethod
+{
+public static void main(String[] ar)
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a Number:");
+int a=sc.nextInt();
+boolean s=specialNumber(a);
+if(s)
+{
+System.out.println("Yes! "+a+" is a special number.");
+}
+else
+{
+System.out.println("No! "+a+" is not a special number.");
+}
+sc.close();
+}
+static boolean specialNumber(int n)
+{
+int d1=n/10;
+int d2=n%10;
+int n1=d1+d2;
+int n2=d1*d2;
+if((n1+n2)==n)
+{
+return true;
+}
+else
+{
+return false;
+}
+}
+}
+-----------------------------------------------------------------------------------------------------------------
+Q48.WAJP to define a method to return sum of first N natural numbers.
+>>import java.util.Scanner;
+public class SumOfNaturalNumbers {
+public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a Number");
+int a=sc.nextInt();
+int sum=sumNatural(a);
+System.out.println(sum+" is sum of 1 to "+a);
+sc.close();
+}
+
+private static int sumNatural(int a) {
+	int sum=0;
+	for(int i=1;i<=a;i++)
+	{
+		sum=sum+i;
+	}
+	return sum;
+}
+}
+
+-----------------------------------------------------------------------------------------------------------------
+Q49.WAJP to define a method to return how many odd number within N.
+>>import java.util.Scanner;
+public class CountOddNumbers {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter a Number: ");
+	int a=sc.nextInt();
+	int count=countOddNumber(a);
+	System.out.println(count+" is Odd number between 1 to "+a);
+	sc.close();
+}
+private static int countOddNumber(int a) {
+	int count=0;
+	for(int i=1;i<=a;i++)
+	{
+		if(i%2!=0)
+			count++;
+	}
+	return count;
+}
+}
+
+-----------------------------------------------------------------------------------------------------------------
+Q50.WAJP to define a method to return sum of even numbers within N.
+>>import java.util.Scanner;
+public class SumOfEvenNumbers {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enetr a number: ");
+	int a=sc.nextInt();
+	int sum=sumEven(a);
+	System.out.println(sum+" is sum of 1 to "+a+" Even Numbers");
+	sc.close();
+}
+
+private static int sumEven(int a) {
+	int sum=0;
+	for(int i=1;i<=a;i++)
+	{
+		if(i%2==0)
+			sum=sum+i;
+	}
+	return sum;
+}
+}
+
+-----------------------------------------------------------------------------------------------------------------
+Q51.WAJP to define a method to return reverse of the number.
+>>import java.util.Scanner;
+public class ReverseNumber {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter a number: ");
+	int a=sc.nextInt();
+	int r=reverseNumber(a);
+	System.out.println(r+" is reverse of "+a);
+	sc.close();
+}
+private static int reverseNumber(int a) {
+	int r=0;
+	while(a!=0)
+	{
+		int d=a%10;//456%10=6
+		r=r*10+d;
+		a=a/10;//45
+	}
+	return r;
+}
+}
+
+-----------------------------------------------------------------------------------------------------------------
+Q52.WAJP to define a method to return true if the number is perfect number otherwise return false.
+Def..Any number can be a Java Perfect Number if the sum of its positive divisors excluding the 
+number itself is equal to that number. For example, 28 is a perfect number because 28 is 
+divisible by 1, 2, 4, 7, 14 and 28 and the sum of these values is 1 + 2 + 4 + 7 + 14 = 28. 
+Remember, we have to exclude the number itself. That is why we have not added 28 here.
+ Some of the Java perfect numbers are 6, 28, 496, 8128, and 33550336, so on.
+>>import java.util.Scanner;
+public class PerfectNumber {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter a Number: ");
+	int a=sc.nextInt();
+	boolean s=isPerfect(a);
+	if(s)
+		System.out.println("Yes! "+a+" is a Perfect Number.");
+	else
+		System.out.println("No! "+a+" is not a Perfect Number.");
+	sc.close();
+}
+
+private static boolean isPerfect(int a) {
+	int sum=0;
+	int b=0;
+	for(int i=1;i<a;i++)
+	{
+		if(a%i==0)
+		{
+			sum=sum+i; 
+		}
+	}
+	if(sum==a)
+	return true;
+	else
+		return false;
+}
+}
+-----------------------------------------------------------------------------------------------------------------
+Q53.WAJP to define a method to return true if the number is prime otherwise return false.
+>>import java.util.Scanner;
+public class PrimeNumber {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter a number: ");
+	int a=sc.nextInt();
+	boolean s=isPrime(a);
+	if(s)
+		System.out.println("Yes! "+a+" is a prime number.");
+	else
+		System.out.println("No! "+a+" is not a prime number.");
+	sc.close();
+}
+
+private static boolean isPrime(int a) {
+	int count=0;
+	for(int i=2;i<=a/2;i++)
+	{
+		if(a%i==0)
+		count++;
+	}
+	
+	if(count==0)
+		return true;
+	else
+		return false;
+}
+}
+
+-----------------------------------------------------------------------------------------------------------------
+Q54.WAJP to define a method to return how many even digits present in the number.
+>>import java.util.Scanner;
+public class SumEvenDigits {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter a Number: ");
+	int a=sc.nextInt();
+	int s=sumEvenDigit(a);
+	System.out.println(s+" is sum of even numbers in number "+a);
+	sc.close();
+}
+
+private static int sumEvenDigit(int a) {
+	int r,sum=0;
+	while(a!=0)
+	{
+		r=a%10;
+		if(r%2==0)
+		{
+			sum=sum+r;
+		}
+		a=a/10;
+	}
+	return sum;
+}
+}
+-----------------------------------------------------------------------------------------------------------------
+Q55.WAJP to define a method to return sum of odd digits in the number.
+>>import java.util.Scanner;
+public class SumOfOdd {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter a Number: ");
+	int a=sc.nextInt();
+	int s=sumOddDigit(a);
+	System.out.println(s+" is sum of odd numbers in number "+a);
+	sc.close();
+}
+
+private static int sumOddDigit(int a) {
+	int r,sum=0;
+	while(a!=0)
+	{
+		r=a%10;
+		if(r%2!=0)
+		{
+			sum=sum+r;
+		}
+		a=a/10;
+	}
+	return sum;
+}
+}
+
+-----------------------------------------------------------------------------------------------------------------
+Q56.Define a method to return how many divisors are there for N.
+>>import java.util.Scanner;
+public class CountDivisors 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a number: ");
+		int a=sc.nextInt();
+		int d=countDivisors(a);
+		System.out.println("Total "+d+" divisors for "+a);
+		sc.close();
+	}
+
+	private static int countDivisors(int a) 
+	{
+		int count=0;
+		for(int i=1;i<=a;i++)
+		{
+			if(a%i==0)
+				count++;
+		}
+		return count;
+	}
+}
+
+-----------------------------------------------------------------------------------------------------------------
+Q57.Define a method to return sum of square of its digits.
+Def. eg-123=(1*1+2*2+3*3)=14
+>>import java.util.Scanner;
+public class SquareSum 
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a number: ");
+		int a=sc.nextInt();
+		int sum=squareDigit(a);
+		System.out.println(sum+" is sum of digits "+a+" number.");
+		sc.close();
+	}
+
+	private static int squareDigit(int a) 
+	{
+		int d=0,sum=0;
+		do
+		{
+			d=a%10;
+			sum=sum+d*d;
+			a=a/10;
+		}while(a!=0);
+		return sum;
+	}
+}
+-----------------------------------------------------------------------------------------------------------------
+Q58.WAJP to define a method to return if the number is armstrong other wise return false.
+>>import java.util.Scanner;
+public class ArmstrongNUmber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc= new Scanner(System.in);
+		System.out.print("Enter a 3 digit Number: ");
+		int a=sc.nextInt();
+		boolean ar=isArmstrong(a);
+		if(ar)
+			System.out.println("Yes! "+a+" is an Armstrong Number.");
+		else
+			System.out.println("No! "+a+" is not an Armstrong Number.");
+		sc.close();
+	}
+
+	private static boolean isArmstrong(int a) 
+	{
+		int b=a;
+		int sum=0;
+		do {
+			int d=a%10;//153
+			sum=sum+d*d*d;//27+125+1
+			a=a/10;
+		}while(a!=0);
+		
+			return sum==b;
+		
+	}
+}
+-----------------------------------------------------------------------------------------------------------------
+***Class
+Q59.WAJP to reverse a number, where number input in a class and calulation done in other class.
+>>package reverse.classApp;
+public class ReverseNumbers {
+int reverse(int x)
+{
+	int rev=0;
+	do {
+		int r=x%10;
+		rev=rev*10+r;
+		x=x/10;
+	}while(x!=0);
+	return rev;
+}
+}
+
+package reverse.classApp;
+import java.util.Scanner;
+public class TestReverse {
+public static void main(String[] args) {
+	ReverseNumbers rv=new ReverseNumbers();
+	Scanner sc =new Scanner(System.in);
+	System.out.print("Enter a number: ");
+	int a=sc.nextInt();
+	System.out.println("Reverse of "+a+" is: "+rv.reverse(a));
+	sc.close();
+}
+}
+
+
+-----------------------------------------------------------------------------------------------------------------
+Q60. Define a method to return true if the number is Pallindrome. Otherwise return false.
+
+
+>>
+package com.pallindrome.classApp;
+import com.reverse.classApp.Reverse;
+public class PallindromeClass 
+{
+	static boolean isPallindrome(int x)
+	{
+		return x== Reverse.reverse(x);
+	}
+}
+
+
+>>package com.reverse.classApp;
+public class Reverse 
+{
+	public static int reverse(int x)
+	{
+		int rev=0;
+		do {
+			int r=x%10;
+			rev=rev*10+r;
+			x=x/10;
+		}while(x!=0);
+		return rev;
+	} 
+}
+
+
+>>
+package com.pallindrome.classApp;
+import java.util.Scanner;
+public class MainPallindrome {
+public static void main(String[] args) {
+	Scanner sc= new Scanner(System.in);
+	System.out.print("Enter a number: ");
+	int p=sc.nextInt();
+	boolean pallindrome= PallindromeClass.isPallindrome(p);
+	if(pallindrome)
+		System.out.println("Yes! "+p+" is a Pallindrome Number.");
+	else
+		System.out.println("No! "+p+" is not a Pallindrome Number.");
+	sc.close();
+}
+}
+
+
+-----------------------------------------------------------------------------------------------------------------
+Q61. WAJP to define isStrong() inside Strong Class to return true, if the number is strong number, Otherwise 
+return false.
+**Def.Eg.145==1!+4!+5!=1+24+120==145 this is strong number.
+>>package com.strong.classApp;
+public class StrongClass {
+static boolean isStrong(int x)
+{
+	int sum=0, temp=x;
+	do {
+		int r=x%10;
+		sum=sum+fact(r);
+		x=x/10;
+	}while(x!=0);
+	return temp==sum;
+}
+
+private static int fact(int r) {
+	int fact=1;
+	while(r>1)
+	{
+		fact=fact*r;
+		r--;
+	}
+	return fact;
+}
+}
+
+
+package com.strong.classApp;
+import java.util.Scanner;
+public class MainStrong {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter a number: ");
+	int a=sc.nextInt();
+	boolean strong=StrongClass.isStrong(a);
+	if(strong)
+		System.out.println("Yes! "+a+ " is a Strong Number.");
+	else
+		System.out.println("No! "+a+" is not a Strong Number.");
+		
+	sc.close();
+}
+}
+
+-----------------------------------------------------------------------------------------------------------------
+Q62.Define a method isArmstrong inside Armstrong class to return true if the number is true otherwise return flase.
+Def.52==5*5+2*2==25+4=29=54==not armstrong number
+153==1*1*1+5*5*5+3*3*3==153==armstrong number
+4328=4*4*4*4+3*3*3*3+2*2*2*2+8*8*8*8=4328==armstrong number
+
+>>package com.armstrong.classApp;
+public class Armstrong {
+static boolean isArmstrong(int x){
+	int sum=0,t=x;
+	int dc=countDigit(x);
+	do {
+		int r=x%10;
+		sum=sum+pow(r,dc);
+		x=x/10;
+	}while(x!=0);
+	return sum==t;
+}
+
+private static int pow(int r, int dc) {
+	int pw=1;
+	while(dc>0)
+	{
+		pw=pw*r;
+		dc--;
+	}
+	return pw;
+}
+
+private static int countDigit(int x) {
+	int count=0;
+	do {
+		count++;
+		x=x/10;
+	}while(x!=0);
+	return count;
+}
+}
+
+package com.armstrong.classApp;
+import java.util.Scanner;
+public class MainArmstrong {
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		System.out.print("Enter a number: ");
+		int a=sc.nextInt();
+		boolean ar=Armstrong.isArmstrong(a);
+		if(ar)
+			System.out.println("Yes! "+a+" is a Armstrong Number.");
+		else
+			System.out.println("No! "+a+" is not a Armstrong Number.");
+		sc.close();
+
+	}
+
+}
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+Q63.WAJP to define isDisarium() inside Disarium class return true if the number is disarium or return false.
+Def. eg 135= 1+3*3+5*5*5==135
+sum of power of digits of its position
+-----------------------------------------------------------------------------------------------------------------
+Q64.
+-----------------------------------------------------------------------------------------------------------------
+Q65.
+-----------------------------------------------------------------------------------------------------------------
+Q66.
+-----------------------------------------------------------------------------------------------------------------
+Q67.
+-----------------------------------------------------------------------------------------------------------------
+Q68.
+-----------------------------------------------------------------------------------------------------------------
+Q69.
+-----------------------------------------------------------------------------------------------------------------
+Q70.
+-----------------------------------------------------------------------------------------------------------------
+Q71.
+-----------------------------------------------------------------------------------------------------------------
+Q72.
+-----------------------------------------------------------------------------------------------------------------
+Q73.
+-----------------------------------------------------------------------------------------------------------------
+Q74.
+-----------------------------------------------------------------------------------------------------------------
+Q75.
+-----------------------------------------------------------------------------------------------------------------
+Q76.
+-----------------------------------------------------------------------------------------------------------------
+Q77.
+-----------------------------------------------------------------------------------------------------------------
+Q78.
+-----------------------------------------------------------------------------------------------------------------
+Q79.
+-----------------------------------------------------------------------------------------------------------------
+Q80.
+-----------------------------------------------------------------------------------------------------------------
+Q81.
+Q82.
+Q83.
+Q84.
+Q85.
+Q86.
+Q87.
+Q88.
+Q89.
+Q90.
+Q91.
+Q92.
+Q93.
+Q94.
+Q95.
+Q96.
+Q97.
+Q98.
+Q99.
+Q100.
+
+
+
+
+
+
+
