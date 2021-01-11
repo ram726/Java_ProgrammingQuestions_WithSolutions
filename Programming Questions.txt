@@ -1579,6 +1579,62 @@ public class MainArmstrong {
 Q63.WAJP to define isDisarium() inside Disarium class return true if the number is disarium or return false.
 Def. eg 135= 1+3*3+5*5*5==135
 sum of power of digits of its position
+
+>>package com.disarium.classApp;
+public class DisariumClass
+{
+	public static boolean isDisarium(int d)
+	{
+		int sum=0,temp=d;
+		int cd=countDigit(d);//count number of digits present in number
+		do {
+			int r=d%10;
+			sum=sum+pow(r,cd);
+			d=d/10;
+			cd--;
+		}while(d!=0);
+		return sum==temp;
+	}
+
+	private static int pow(int r, int cd) {
+		int pw=1;
+		while(cd>0)
+		{
+			pw=pw*r;
+			cd--;
+		}
+		return pw;
+	}
+
+	private static int countDigit(int d) {
+		int count=0;
+		do {
+			count++;
+			d=d/10;
+		}while(d!=0);
+		return count;
+	}
+}
+
+
+package com.disarium.classApp;
+import java.util.Scanner;
+public class MainDisarium 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a number: ");
+		int n=sc.nextInt();
+		boolean dis= DisariumClass.isDisarium(n);
+		if(dis)
+			System.out.println("Yes! "+n+" is a Disarium Number.");
+		else
+			System.out.println("No! "+n+" is not a Disarium Number.");
+		sc.close();
+	}
+}
+
 -----------------------------------------------------------------------------------------------------------------
 Q64.
 -----------------------------------------------------------------------------------------------------------------
